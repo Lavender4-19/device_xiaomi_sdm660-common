@@ -93,6 +93,8 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Clang
 TARGET_KERNEL_CLANG_VERSION := 8508608
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # ConfigFS
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
